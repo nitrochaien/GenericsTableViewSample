@@ -8,18 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: GenericTableViewController<CustomCell, Person> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        items = [Person(firstName: "Bill", lastName: "Clinton"),
+                 Person(firstName: "Barrack", lastName: "Obama")]
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
